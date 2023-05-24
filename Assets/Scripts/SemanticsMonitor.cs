@@ -86,6 +86,9 @@ public class SemanticsMonitor : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI humorText;
+
+    [SerializeField]
+    private Camera semanticCamera;
     
     private readonly HashSet<SemanticLabel> humorsLeft = new ();
 
@@ -116,6 +119,7 @@ public class SemanticsMonitor : MonoBehaviour
         }
 
         overlayRenderer.enabled = false;
+        semanticCamera.enabled = false;
 
         humorRoot.gameObject.SetActive(false);
         
@@ -290,6 +294,7 @@ public class SemanticsMonitor : MonoBehaviour
         set
         {
             overlayRenderer.enabled = value;
+            semanticCamera.enabled = value;
             foreach (var semanticItem in semanticItems)
             {
                 semanticItem.Color.gameObject.SetActive(value);
