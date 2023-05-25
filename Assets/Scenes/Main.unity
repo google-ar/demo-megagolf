@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emojisInterval: 0.2
-  overlayInterval: 0.2
+  overlayInterval: 0.04
   presenceThreshold: 0.05
   semanticItems:
   - {fileID: 4462481812089449653}
